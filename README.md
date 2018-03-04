@@ -4,13 +4,13 @@ See https://www.udemy.com/ansible-quick-start
 
 ## Environment setup
 Vagrant was used to provision the servers
-* control: running centos7 used to execute ansible scripts
-* centos client running centos7
-* ubuntu client running ubuntu
+* control: running ubuntu used to execute ansible scripts
+* club# client running ubuntu
 
 See Vagrantfile for details.
 
 ### Install ansible on control
+via shell: boot-control.sh
 
 access the control system with:
 `vagrant ssh control`
@@ -18,10 +18,12 @@ access the control system with:
 install packages needed for ansible on centos
 
 ```bash
-sudo yum install epel-release
-sudo yum update
-sudo yum install git python python-devel python-pip openssl ansible
-
+apt-get -q update
+apt-get -y install software-properties-common # python
+apt-add-repository -y ppa:ansible/ansible
+apt-get -q update
+apt-get -y install ansible
+apt-get -y autoremove
 ```
 
 * check that ansible is installed
@@ -29,13 +31,16 @@ sudo yum install git python python-devel python-pip openssl ansible
 ansible --version
 ansible 2.4.2.0
 ```
-### Post install Setup of control 
-* edit /etc/ansible/ansible.cfg
-uncomment following lines:
+#### update hosts
 ```
-inventory      = /etc/ansible/hosts
-sudo_user      = root
+# vagrant env nodes
+10.0.17.10 control
+10.0.17.21 club1
+10.0.17.22 club2
+
 ```
+NB need to update rest
+
 * edit /etc/ansible/hosts
 see [hosts](hosts)
 
