@@ -1,0 +1,13 @@
+  /home/glenn/src/ansible/ansible-gs:
+  total used in directory 40 available 84847900
+  drwxrwxr-x 4 glenn glenn 4096 Mar  4 13:55 .
+  drwxrwxr-x 4 glenn glenn 4096 Mar  4 13:55 ..
+  -rw-rw-r-- 1 glenn glenn   50 Mar  4 13:54 ansible.cfg
+  -rw-rw-r-- 1 glenn glenn  463 Mar  4 13:54 boot-control.sh
+  drwxrwxr-x 8 glenn glenn 4096 Mar  4 13:54 .git
+  -rw-rw-r-- 1 glenn glenn   12 Mar  4 13:54 .gitignore
+  -rw-rw-r-- 1 glenn glenn  714 Mar  4 13:54 hosts
+  -rw-rw-r-- 1 glenn glenn 2010 Mar  4 13:54 README.md
+  drwxrwxr-x 3 glenn glenn 4096 Mar  4 14:01 .vagrant
+  drwxrwxr-x 2 glenn glenn 4096 Mar  4 17:39 scripts
+  -rw-rw-r-- 1 glenn glenn 1116 Mar  4 13:54 Vagrantfile
